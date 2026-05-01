@@ -2,6 +2,18 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Git discipline
+
+After completing any meaningful unit of work — a new feature, a bug fix, a refactor — commit and push immediately. Never leave the repo in a state where work exists locally but not on GitHub.
+
+```bash
+git add <files>
+git commit -m "Short description of what changed and why"
+git push
+```
+
+Commit messages should be specific (e.g. `"Fix enemy spawning off wrong edge"`, `"Add boss enemy type to level 5"`), not vague (`"updates"`, `"fix stuff"`). Each commit should represent one logical change so it's easy to revert a specific piece of work without undoing unrelated changes.
+
 ## Running the game
 
 ES modules require HTTP — open via a local server, not directly from disk:
